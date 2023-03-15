@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
 
             sfd.Title = "Kayıt";
 
-            sfd.FileName = textBox1.Text+"qrcode";
+            sfd.FileName = textBox1.Text+""+"qrcode";
 
             DialogResult sonuç = sfd.ShowDialog();
 
@@ -45,6 +45,12 @@ namespace WindowsFormsApp1
             {
                 pictureBox1.Image.Save(sfd.FileName);
             }
+        }
+
+
+        private void textBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox1.Text = "";
         }
     }
 }

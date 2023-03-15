@@ -67,6 +67,8 @@
             this.textBox1.Size = new System.Drawing.Size(345, 20);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "www.website.com";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseClick);
             // 
             // button2
             // 
@@ -84,6 +86,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(383, 403);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);

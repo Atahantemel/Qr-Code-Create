@@ -28,5 +28,23 @@ namespace WindowsFormsApp1
             pictureBox1.Image = qrCodeImage;
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+
+            sfd.Filter = "jpeg dosyası(*.jpg)|*.jpg|Bitmap(*.bmp)|*.bmp";
+
+            sfd.Title = "Kayıt";
+
+            sfd.FileName = textBox1.Text+"qrcode";
+
+            DialogResult sonuç = sfd.ShowDialog();
+
+            if (sonuç == DialogResult.OK)
+            {
+                pictureBox1.Image.Save(sfd.FileName);
+            }
+        }
     }
 }
